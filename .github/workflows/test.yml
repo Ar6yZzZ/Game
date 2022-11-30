@@ -1,0 +1,14 @@
+name: testAction
+
+on:
+  push:
+    branches:
+      -test
+      
+jobs:
+  testing:
+    runs-on: macos
+    
+    steps:
+      - name: printer
+        run: echo "hello,world!"
