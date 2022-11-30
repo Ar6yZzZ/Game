@@ -4,8 +4,8 @@ on: push
       
 jobs:
   testing:
-    runs-on: macos
+    runs-on: ubuntu-latest
     
     steps:
       - name: printer
-        run: echo "hello,world!"
+        run : echo "hello,world!"
