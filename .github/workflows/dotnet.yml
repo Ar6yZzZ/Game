@@ -18,6 +18,6 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore firstGame/Assets/scripts/move.cs
+      run: dotnet restore Assets/scripts/move.cs
     - name: Build
-      run: dotnet build firstGame/Assets/scripts/move.cs --no-restore 
+      run: dotnet build Assets/scripts/move.cs --no-restore 
