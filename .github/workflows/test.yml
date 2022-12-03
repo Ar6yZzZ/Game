@@ -6,13 +6,18 @@ jobs:
   testing:
     runs-on: ubuntu-latest
     
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
+    
     steps:
-      - name: git-clone
-        uses: actions/checkout@v3
-        
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+      - uses: actions/checkout@v3
+      
+      - name: Setup .NET ${{ matrix.node-version }}
+        uses: actions/setup-dotnet@v3  
         with:
-          dotnet-version: 6.0.x
-      - name: Restore dependencies
-        run: dotnet restore
+          dotnet-version: ${{ matrix.node-version }}
+          
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
