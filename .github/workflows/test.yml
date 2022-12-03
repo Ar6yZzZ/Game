@@ -8,4 +8,9 @@ jobs:
     
     steps:
       - name: printer
-        run : echo "hello,world!"
+        uses: actions/printer@v2
+        
+      - name: testing
+        uses: ./.github/actions/testing
+        with:
+          Name: ${{ github.event.inputs.Name }}
