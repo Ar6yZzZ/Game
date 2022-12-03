@@ -7,9 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: printer
-        
-      - name: testing
-        uses: ./.github/actions/testing
-        with:
-          Name: ${{ github.event.inputs.Name }}
+      - name: run_build
+        uses: actions/checkout@v2.3.1
+        with: 
+            persist-credentials: false
+            
+      - name: Install 🔧
+        run: npm install
+
+      - name: Run Test 🔨
+        run: npm run test
+
+      - name: Build 👷
+        run: npm run build
