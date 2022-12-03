@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet --help
+      run: dotnet --depsfile https://github.com/Ar6yZzZ/Game/blob/main/first%20game/Assets/scripts/move.cs
     - name: Build
       run: dotnet build --no-restore
     - name: Test
