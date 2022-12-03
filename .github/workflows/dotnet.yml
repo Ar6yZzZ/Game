@@ -20,4 +20,4 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore Game/Assets/scripts/move.cs
     - name: Build
-      run: dotnet build first game/Assets/scripts/move.cs --no-restore 
+      run: dotnet build first_game/Assets/scripts/move.cs --no-restore 
