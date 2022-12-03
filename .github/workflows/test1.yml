@@ -17,7 +17,5 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-    - name: Restore dependencies
-      run: dotnet restore first-game/Assets/scripts/move.cs
     - name: Build
       run: dotnet build first-game/Assets/scripts/move.cs --no-restore
