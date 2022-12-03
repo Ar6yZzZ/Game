@@ -8,7 +8,7 @@ public class move : MonoBehaviour
    public float speed, jumpImpulse; 
    void Start() {
        ball = GetComponent<Rigidbody2D>();
-       speed *= 500;
+       speed *= 400;
    }
    private void Update() {
         if (Input.GetKeyDown(KeyCode.W)) { 
