@@ -21,4 +21,4 @@ jobs:
           pip install unittest2
       
       - name: Run tests
-        run: python3 testing.py
+        run: python3 calc.py
